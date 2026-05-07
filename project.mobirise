@@ -1,0 +1,153 @@
+{
+  "settings": {
+    "name": "App-arbiscan",
+    "currentPage": "index.html",
+    "theme": {
+      "name": "startm5",
+      "title": "StartM5",
+      "titlePreset": "StartM5",
+      "styling": {
+        "primaryColor": "#9fe870",
+        "secondaryColor": "#ffd7ef",
+        "successColor": "#3a341c",
+        "infoColor": "#320707",
+        "warningColor": "#a0e2e1",
+        "dangerColor": "#ffea64",
+        "mainFont": "Inter Tight",
+        "display1Font": "Inter Tight",
+        "display1Size": 5,
+        "display2Font": "Inter Tight",
+        "display2Size": 4,
+        "display5Font": "Inter Tight",
+        "display5Size": 2,
+        "display7Font": "Inter Tight",
+        "display7Size": 1.4,
+        "display4Font": "Inter Tight",
+        "display4Size": 1.4,
+        "isRoundedImages": true,
+        "isRoundedButtons": true,
+        "isLargeButtons": true,
+        "isGhostButtonBorder": true,
+        "underlinedLinks": false,
+        "isAnimatedOnScroll": false,
+        "isScrollToTopButton": false
+      }
+    },
+    "path": "@PROJECT_PATH@",
+    "versionFirst": "6.1.12",
+    "siteFonts": [
+      {
+        "css": "'Inter Tight', sans-serif",
+        "name": "Inter Tight",
+        "url": "https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i"
+      }
+    ],
+    "favicon": "@PROJECT_PATH@/assets/images/arbiscan-favicon.png",
+    "robotsSwitcher": true,
+    "robotsText": "User-agent: *\nDisallow: /cgi-bin\nSitemap: https://App-arbiscan.github.io/sitemap.xml/",
+    "sitemapSwitcher": true,
+    "siteUrl": "https://App-arbiscan.github.io/",
+    "sitemapSwitcherAuto": "on",
+    "mbrsiteDomain": "x65gafgbfo",
+    "imageResize": false,
+    "usedWebp": false,
+    "cookiesAlert": false,
+    "gdpr": false,
+    "uniqCompNum": 2,
+    "versionPublish": "6.1.12"
+  },
+  "pages": {
+    "index.html": {
+      "settings": {
+        "main": true,
+        "title": "Arbiscan - Explorer | Home",
+        "meta_descr": "Explore Arbiscan, the leading blockchain explorer for the Arbitrum network. Track transactions, verify smart contracts, and monitor tokens with ease and transparency.",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": ""
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "background-color": "@bgColor",
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "img": {
+              "object-fit": "contain",
+              "border-radius": "0 !important"
+            }
+          },
+          "_name": "image04",
+          "_sourceTheme": "startm5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"image03\" group=\"Image & Video\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" value=\"0\" step=\"1\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" value=\"0\" step=\"1\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Caption\" name=\"showText\">\n        <header>Background</header>\n        <input type=\"color\" title=\"Color\" name=\"bgColor\" value=\"#ffffff\">\n    </mbr-parameters>\n\n    <div class=\"image-block m-auto\">\n        <a href=\"https://arbiscan.io/\"><img src=\"@PROJECT_PATH@/assets/images/arbiscan.png\" alt=\"arbiscan\"></a>\n        <div mbr-if=\"showText\">\n            <p class=\"mbr-text mt-4 pb-4 align-center mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n                Unlock your true path!\n            </p>\n        </div>\n    </div>\n</section>",
+          "_cid": "viWxMuufIN",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "image04-0"
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = \"color\")": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = \"image\")": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-fallback-image.disabled": {
+              "display": "none"
+            },
+            ".mbr-fallback-image": {
+              "display": "block",
+              "background-size": "cover",
+              "background-position": "center center",
+              "width": "100%",
+              "height": "100%",
+              "position": "absolute",
+              "top": "0",
+              "& when (@bg-type = 'video')": {
+                "background-image": "url(@fallBackImage)"
+              }
+            },
+            ".card-wrapper": {
+              "background": "@wrapBgColor",
+              "@media (max-width: 767px)": {
+                "padding": "2rem 1.5rem"
+              },
+              "@media (min-width: 768px) and (max-width: 991px)": {
+                "padding": "2.25rem"
+              },
+              "@media (min-width: 992px)": {
+                "padding": "4rem"
+              }
+            },
+            ".mbr-text, .mbr-section-btn": {
+              "color": "#000000",
+              "text-align": "left"
+            },
+            ".card-title, .card-box": {
+              "text-align": "left",
+              "color": "#000000"
+            }
+          },
+          "_name": "article07",
+          "_sourceTheme": "startm5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"article07\" group=\"Article\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{\n    'mbr-fullscreen': fullScreen,\n    'mbr-parallax-background': bg.parallax}\">\n  <mbr-parameters>\n    <header>Size</header>\n    <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n    <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n    <input type=\"range\" inline title=\"Content Width\" name=\"contentWidth\" min=\"8\" max=\"12\" step=\"1\" value=\"10\">\n    <header>Show/Hide</header>\n    <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n    <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\" checked>\n    <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n    <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\">\n    <input type=\"color\" title=\"Wrap Bg\" name=\"wrapBgColor\" value=\"#ffffff\">\n    <header>Background</header>\n    <fieldset type=\"background\" name=\"bg\" parallax>\n      <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\" parallax>\n      <input type=\"color\" title=\"Color\" value=\"#edefeb\" selected>\n      <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n    </fieldset>\n    <header condition=\"bg.type === 'video'\">Fallback Image</header>\n    <input type=\"image\" title=\"Fallback Image\" value=\"../_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n    <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n    <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n    <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.3\" condition=\"overlay && bg.type !== 'color'\">\n  </mbr-parameters>\n\n  <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n  <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\"></div>\n  <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n    <div class=\"row justify-content-center\">\n      <div class=\"card col-md-12 col-lg-{{contentWidth}}\">\n        <div class=\"card-wrapper\">\n          <h3 class=\"card-title mbr-fonts-style mbr-white mt-3 mb-4\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".card-title, .card-box\">\n            <b><a href=\"https://arbiscan.io/\" class=\"text-primary\">Arbiscan </a>- Explorer | Home</b></h3>\n          <div class=\"row card-box align-left\">\n            <div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style mb-3\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\"><b><a href=\"https://arbiscan.io/\" class=\"text-primary\">Arbiscan</a>: The Explorer of the Arbitrum Blockchain</b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">In the rapidly evolving world of cryptocurrencies, blockchain explorers play a critical role in providing transparency, analytics, and trust for users navigating decentralized networks. Arbiscan is one such essential tool, serving as the go-to blockchain explorer for the Arbitrum network, a layer-2 scaling solution built on Ethereum.<br><br><b>What is <a href=\"https://arbiscan.io/\" class=\"text-primary\">Arbiscan </a>?<br></b><a href=\"https://arbiscan.io/\" class=\"text-primary\">Arbiscan </a>is a blockchain explorer designed specifically for the Arbitrum blockchain. It allows users to search, monitor, and verify transactions, smart contracts, tokens, and addresses within the Arbitrum ecosystem. Essentially, it acts as a transparent window into the blockchain, letting users see the state of accounts, track assets, and analyze network activity without relying on centralized intermediaries.<br><br>Think of it as the “Google Maps” for the Arbitrum network—it provides detailed paths and directions for every transaction.<br><br><b>Key Features of <a href=\"https://arbiscan.io/\" class=\"text-primary\">Arbiscan</a><br></b><a href=\"https://arbiscan.io/\" class=\"text-primary\">Arbiscan </a>is packed with features that are valuable both to casual crypto users and blockchain developers:<br><br><b>1. Transaction Tracking :-<br></b>Users can search for transactions by transaction hash to check their status—pending, confirmed, or failed.<br>It provides details such as gas fees, timestamp, block confirmation, and involved addresses.<br><br><b>2. Address Monitoring :-<br></b>Users can input a wallet address to see its balance, transaction history, and ERC-20 token holdings.<br>It also highlights contract addresses, helping users distinguish between regular wallets and smart contracts.<br><br><b>3. Token Analytics :-<br></b>Supports token explorers for ERC-20 and ERC-721 tokens (NFTs) on Arbitrum.<br>Displays token holders, transfers, and other analytics crucial for investors and developers.<br><br><b>4. Smart Contract Verification :-<br></b>Developers can verify the source code of smart contracts on <a href=\"https://arbiscan.io/\" class=\"text-primary\">Arbiscan</a>.<br>This feature increases transparency, allowing users to interact safely with decentralized applications (dApps).<br><br><b>5. Gas Tracker :-<br></b>Provides real-time data on gas fees required to execute transactions.<br>Enables users to optimize transaction costs on the Arbitrum network.<br><br><b>6. Developer Tools :-<br></b>API access for building applications that interact with the Arbitrum blockchain.<br>Historical data and statistics for analytics, research, and market insights.<br><br><b>Why <a href=\"https://arbiscan.io/\" class=\"text-primary\">Arbiscan </a>Matters<br></b><a href=\"https://arbiscan.io/\" class=\"text-primary\">Arbitrum </a>is a <b>layer-2 scaling solution for Ethereum</b>, designed to improve transaction speed and reduce fees. As adoption grows, transparency becomes increasingly critical. Arbiscan ensures users can verify activity on the network, providing trust and reliability without depending on centralized intermediaries.<br><br>For developers, Arbiscan is indispensable—it allows debugging smart contracts, tracking usage patterns, and understanding network activity in detail.<br><br><b>How to Use <a href=\"https://arbiscan.io/\" class=\"text-primary\">Arbiscan</a><br>1. Visit the Website: </b>Navigate to <a href=\"https://arbiscan.io/\" class=\"text-primary\">arbiscan.io</a><br><b>2. Search by Transaction, Address, or Token:</b> Use the search bar to enter a transaction hash, wallet address, or token symbol.<br><b>3. Explore Data: </b>View transaction status, contract interactions, and token details.<br><b>4. Advanced Tools:</b> Use APIs or developer dashboards for custom data analysis or monitoring.<br><br><b>Conclusion<br></b><a href=\"https://arbiscan.io/\" class=\"text-primary\">Arbiscan </a>is not just a blockchain explorer; it’s a bridge between the user and the complex world of Arbitrum. By providing transparent and detailed insights into transactions, tokens, and smart contracts, it empowers users, developers, and investors to interact confidently with the Arbitrum network.<br><br>As Ethereum continues to scale through solutions like Arbitrum, tools like <a href=\"https://arbiscan.io/\" class=\"text-primary\">Arbiscan </a>will remain essential for maintaining transparency, security, and efficiency in the decentralized ecosystem.</p>\n              </div>\n            </div>\n            \n            \n            \n          </div>\n          <div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\">\n            <a class=\"btn btn-primary\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">Start Now</a>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>",
+          "_cid": "viWxNzrf5Z",
+          "_anchor": "article07-1",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    }
+  }
+}
